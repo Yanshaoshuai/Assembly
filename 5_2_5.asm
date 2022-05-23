@@ -1,7 +1,7 @@
 assume cs:code
 code segment
-    mov ax,0ffffh;//字母开头需要在前面加0
-    mov ds,ax;//累加器
+    mov ax,0ffffh ;字母开头需要在前面加0
+    mov ds,ax   ;累加器
     mov bx,6
     mov al,[bx]
     mov ah,0

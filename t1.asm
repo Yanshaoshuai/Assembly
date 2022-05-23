@@ -1,4 +1,4 @@
-// 初始值 21000H=be 21001H=00
+; 初始值 21000H=be 21001H=00
 assume cs:codesg
 codesg segment
 
