@@ -5,7 +5,7 @@ data    segment
 data    ends
 code    segment
         start:  mov dh,11    ;行号
-                mov dl,72    ;列号
+                mov dl,72    ;列号      必须为偶数否则会乱码(因为每个字符包括属性占两字节)
                 mov cl,2    ;颜色
                 mov ax,data
                 mov ds,ax
@@ -38,7 +38,7 @@ code    segment
                 mov es:[bx+di],ax   ;输出到缓冲区
                 inc si
                 add di,2            ;di+2
-                loop    s
+                jmp short   s
 
         ok:     pop es
                 pop bx
